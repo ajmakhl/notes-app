@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const key = process.env.key;
+const key = "nl4b6345phwrjvw43mt2uv945jptg3i53n66";
 export const post = (note) => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
   localStorage.setItem(key, JSON.stringify([...db, note]));
