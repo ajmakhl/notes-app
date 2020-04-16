@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const key = process.env.KEY;
+const key = process.env.key;
 export const post = (note) => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
   localStorage.setItem(key, JSON.stringify([...db, note]));
@@ -8,7 +8,6 @@ export const get = () => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
   const sorted = _.sortBy(db, "createdAt");
   return sorted.reverse();
-  return db;
 };
 export const remove = (note) => {
   const db = JSON.parse(localStorage.getItem(key));
