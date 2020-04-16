@@ -7,7 +7,8 @@ export const post = (note) => {
 export const get = () => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
   // const sorted = _.sortBy(db, "createdAt");
-  return sorted.reverse();
+  // return sorted.reverse();
+  return db;
 };
 export const remove = (note) => {
   const db = JSON.parse(localStorage.getItem(key));
