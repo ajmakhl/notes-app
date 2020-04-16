@@ -1,4 +1,4 @@
-// import _ from "lodash";
+const _ = require("lodash");
 const key = "notes-app-q1!w2@";
 export const post = (note) => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
@@ -6,8 +6,8 @@ export const post = (note) => {
 };
 export const get = () => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
-  // const sorted = _.sortBy(db, "createdAt");
-  // return sorted.reverse();
+  const sorted = _.sortBy(db, "createdAt");
+  return sorted.reverse();
   return db;
 };
 export const remove = (note) => {
