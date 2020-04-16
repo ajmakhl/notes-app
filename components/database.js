@@ -1,7 +1,7 @@
 import _ from "lodash";
 const key = "notes-app-q1!w2@";
 export const post = (note) => {
-  const db = JSON.parse(localStorage.getItem(key)) || [];
+  const db = JSON.parse(localStorage.getItem(key) || []);
   localStorage.setItem(key, JSON.stringify([...db, note]));
 };
 export const get = () => {
