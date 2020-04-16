@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Form from "../components/Form";
-import List from "../components/List";
-import { get } from "../components/database";
+// import Form from "../components/Form";
+// import List from "../components/List";
+// import { get } from "../components/database";
 const Home = () => {
   const [data, setData] = useState([]);
-  const saveNote = () => setData(get());
+  // const saveNote = () => setData(get());
   useEffect(() => {
-    if (data.length !== get().length) setData(get());
+    // if (data.length !== get().length) setData(get());
   }, [data, setData]);
   return (
     <div className="container">
@@ -22,8 +22,8 @@ const Home = () => {
       <main>
         <h1>Notes</h1>
         <p>Data is saved on the local storage of your browser.</p>
-        <Form saveNote={saveNote} />
-        <List data={data} saveNote={saveNote} />
+        {/* <Form saveNote={saveNote} /> */}
+        {/* <List data={data} saveNote={saveNote} /> */}
       </main>
       <style jsx>{`
         h1 {
