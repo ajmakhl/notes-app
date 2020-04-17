@@ -55,7 +55,7 @@ export default (props) => {
           .note > ul {
             display: none;
             position: absolute;
-            bottom: 80%;
+            top: -25px;
             padding: 3px 5px;
             padding-bottom: 0;
             border-radius: 3px;
