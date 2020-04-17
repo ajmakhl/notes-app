@@ -8,6 +8,7 @@ export default (props) => {
     e.preventDefault();
     props.saveNote();
     post({ note, id: v4(), createdAt: Date.now() });
+    setNote("");
   };
   return (
     <div>
