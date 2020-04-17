@@ -1,4 +1,3 @@
-const _ = require("lodash");
 const key = "nl4b6345phwrjvw43mt2uv945jptg3i53n66";
 export const post = (note) => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
@@ -6,7 +5,7 @@ export const post = (note) => {
 };
 export const get = () => {
   const db = JSON.parse(localStorage.getItem(key)) || [];
-  const sorted = _.sortBy(db, "createdAt");
+  const sorted = db.sort((a, b) => a.createdAt - b.createdAt);
   return sorted.reverse();
 };
 export const remove = (note) => {
