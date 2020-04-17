@@ -1,29 +1,9 @@
 import { remove } from "../components/database";
+import timestamp from "../components/timestamp";
 export default (props) => {
   const _remove = (note) => {
     props.saveNote();
     remove(note);
-  };
-  const formatDate = (note) => {
-    const now = Date.now();
-    const nowYear = new Date(now).getFullYear();
-    const nowMonth = new Date(now).getMonth();
-    const nowDay = new Date(now).getDate();
-    const d = new Date(note.createdAt);
-    const year = d.getFullYear();
-    const month = d.getMonth();
-    const day = d.getDate();
-    if (year === nowYear) {
-      if (month === nowMonth) {
-        if (nowDay - day === 0) {
-          return "Today";
-        }
-        if (nowDay - day < 8) {
-          return `${nowDay - day} days ago`;
-        }
-      }
-    }
-    return `${month}-${day}-${year}`;
   };
   return props.data.map((note) => {
     return (
@@ -33,7 +13,7 @@ export default (props) => {
             <li onClick={() => _remove(note)}>delete</li>
           </ul>
           <p>{note.note}</p>
-          <span className="date">{formatDate(note)}</span>
+          <span className="date">{timestamp(note)}</span>
         </span>
         <style jsx>{`
           div {

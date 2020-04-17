@@ -30,6 +30,7 @@ const Home = () => {
           margin: 30px 0;
         }
         p {
+          padding: 0 10px;
           color: #3f3f3f;
         }
         main {
