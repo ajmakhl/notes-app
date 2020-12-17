@@ -5,3 +5,4 @@
 - An action that deletes all data at once.
 - Add title to notes
 - Group notes based on tags
+
