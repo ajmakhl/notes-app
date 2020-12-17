@@ -1,7 +1,4 @@
-# Notes
-
-Notes that are saved in the local storage of the browser being used.
-
+# Notes Notes that are saved in the local storage of the browser being used.
 ## Roadmap
 
 - Edit notes
